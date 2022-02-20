@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>1 | Show Hide Password | Vanilla Javascript</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="inputBox">
+        <input type="password" name="" placeholder="Enter Password" id="password">
+        <div id="toggle" onclick="showHide();"></div>
+
+        <script type="text/javascript">
+            const password = document.getElementById('password');
+            const toggle = document.getElementById('toggle');
+
+            function showHide() {
+                if (password.type === 'password') {
+                    password.setAttribute('type', 'text');
+                    toggle.classList.add('hide');
+                } else {
+                    password.setAttribute('type', 'password');
+                    toggle.classList.remove('hide');
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
